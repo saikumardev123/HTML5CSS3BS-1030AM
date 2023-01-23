@@ -1,0 +1,14 @@
+WebStorage: can also be called as browser storage 
+
+In WebStorage, there are 2 types of storages. 
+
+1.Local storage: Local Storage is a permanent memory that is stored in the browser memory in local storage segment. 
+
+in Local Storage, the data will be stored in the form of key value pairs. 
+
+key and values will be strings. 
+
+We cannot store different types of data as a value in local storage. 
+
+2.Session storage: 
+

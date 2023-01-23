@@ -1,0 +1,27 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+        // localStorage.setItem('username', "kiran123");
+        // localStorage.setItem('password', "jadvcjhsvdch");
+        // localStorage.setItem('email', "k@gmail.com");
+        // var username = localStorage.getItem("username");
+        // console.log("username", username);
+        //localStorage.clear();
+        //localStorage.removeItem("username");
+        for (var i = 0; i < localStorage.length; i++) {
+            var key = localStorage.key(i);
+            console.log(key, " :", localStorage.getItem(key));
+        }
+
+    </script>
+
+</body>
+
+</html>
