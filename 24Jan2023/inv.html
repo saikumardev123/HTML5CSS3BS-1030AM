@@ -1,0 +1,135 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <input type="text" id="assetId" placeholder="enter asset it" size="40"> <br><br>
+    <input type="text" id="name" placeholder="enter asset name" size="40"> <br><br>
+    <input type="text" id="assignee" placeholder="enter assignee name" size="40"> <br><br>
+    <input type="text" id="assignedby" placeholder="enter assigned by name" size="40"> <br><br>
+    <button id="toggleBtn" onclick="addAsset()">Add Asset</button>
+    <br>
+
+    <table border="1" width="100%">
+
+        <thead>
+            <th>AssetId</th>
+            <th>Asset Name</th>
+            <th>Assignee</th>
+            <th>AssignedBy</th>
+            <th colspan="2">Operation</th>
+        </thead>
+
+        <tbody id="tbody" style="text-align: center">
+
+        </tbody>
+
+
+    </table>
+
+    <script>
+
+        if (localStorage.getItem("assets") == null) {
+            localStorage.setItem('assets', JSON.stringify([]));
+        }
+
+        showAssets();
+
+        function addAsset() {
+            var assetId = document.getElementById("assetId").value;
+            var assetName = document.getElementById("name").value;
+            var assignee = document.getElementById("assignee").value;
+            var assignedby = document.getElementById("assignedby").value;
+            var asset = {
+                assetId: assetId,
+                assetName: assetName,
+                assignee: assignee,
+                assignedby: assignedby
+            }
+            var assetsLC = JSON.parse(localStorage.getItem("assets"));
+            assetsLC.push(asset);
+            console.log("assetsLC", assetsLC);
+            localStorage.setItem("assets", JSON.stringify(assetsLC));
+            clear();
+            showAssets();
+        }
+        function showAssets() {
+            var assets = JSON.parse(localStorage.getItem("assets"));
+            var tableBodyData = "";
+            for (var i = 0; i < assets.length; i++) {
+                var asset = assets[i];
+                tableBodyData = tableBodyData + "<tr>" + "<td>" + asset.assetId + "</td>" + "<td>" + asset.assetName + "</td>" + "<td>" + asset.assignee + "</td>" + "<td>" + asset.assignedby + "</td>" + "<td>" + "<button onclick='deleteAsset(" + asset.assetId + ")'>Delete</button>" + "</td>" + "<td>" + "<button onclick='editAsset(" + asset.assetId + ")'>Edit</button>" + "</td>" + "</tr>"
+            }
+            document.getElementById("tbody").innerHTML = tableBodyData;
+        }
+
+        function deleteAsset(assetId) {
+            // CODE to get the assets
+            for (var i = 0; i < assets.length; i++) {
+                var asset = assets[i];
+                if (asset.assetId == assetId) {
+                    assets.splice(i, 1);
+                    break;
+                }
+            }
+            // update the local storage with updated array
+            showAssets();
+        }
+        function editAsset(assetId) {
+            for (var i = 0; i < assets.length; i++) {
+                var asset = assets[i];
+                if (asset.assetId == assetId) {
+                    document.getElementById("assetId").value = assetId;
+                    document.getElementById("name").value = asset.assetName;
+                    document.getElementById("assignee").value = asset.assignee;
+                    document.getElementById("assignedby").value = asset.assignedby;
+                    document.getElementById("assetId").disabled = true;
+                    break;
+                }
+            }
+            var toogleBtn = document.getElementById("toggleBtn");
+            toogleBtn.innerHTML = "Update Asset";
+            toogleBtn.removeAttribute('onclick');
+            toggleBtn.setAttribute('onclick', "saveAsset()");
+        }
+
+        function saveAsset() {
+
+            var assetId = document.getElementById("assetId").value;
+            var assetName = document.getElementById("name").value;
+            var assignee = document.getElementById("assignee").value;
+            var assignedby = document.getElementById("assignedby").value;
+
+            for (var i = 0; i < assets.length; i++) {
+                var asset = assets[i];
+                if (asset.assetId == assetId) {
+                    asset.assetName = assetName;
+                    asset.assignee = assignee;
+                    asset.assignedby = assignedby;
+                    document.getElementById("assetId").disabled = false;
+                    break;
+                }
+            }
+
+            var toogleBtn = document.getElementById("toggleBtn");
+            toogleBtn.innerHTML = "Add Asset";
+            toogleBtn.removeAttribute('onclick');
+            toggleBtn.setAttribute('onclick', "addAsset()");
+            clear();
+            showAssets();
+        }
+        function clear() {
+            var arr = ["assetId", "name", "assignee", "assignedby"];
+            for (var i = 0; i < arr.length; i++) {
+                clearTextField(arr[i]);
+            }
+        }
+        function clearTextField(id) {
+            document.getElementById(id).value = "";
+        }
+    </script>
+</body>
+
+</html>
