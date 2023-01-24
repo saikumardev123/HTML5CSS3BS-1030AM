@@ -66,7 +66,8 @@
         }
 
         function deleteAsset(assetId) {
-            // CODE to get the assets
+            // CODE to get the assets from LC
+            var assets = JSON.parse(localStorage.getItem("assets"));
             for (var i = 0; i < assets.length; i++) {
                 var asset = assets[i];
                 if (asset.assetId == assetId) {
@@ -75,9 +76,11 @@
                 }
             }
             // update the local storage with updated array
+            localStorage.setItem('assets', JSON.stringify(assets));
             showAssets();
         }
         function editAsset(assetId) {
+            var assets = JSON.parse(localStorage.getItem("assets"));
             for (var i = 0; i < assets.length; i++) {
                 var asset = assets[i];
                 if (asset.assetId == assetId) {
@@ -102,6 +105,7 @@
             var assignee = document.getElementById("assignee").value;
             var assignedby = document.getElementById("assignedby").value;
 
+            // code to get LC
             for (var i = 0; i < assets.length; i++) {
                 var asset = assets[i];
                 if (asset.assetId == assetId) {
@@ -117,6 +121,7 @@
             toogleBtn.innerHTML = "Add Asset";
             toogleBtn.removeAttribute('onclick');
             toggleBtn.setAttribute('onclick', "addAsset()");
+            // Update to LC
             clear();
             showAssets();
         }
