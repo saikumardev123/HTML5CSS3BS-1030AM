@@ -106,6 +106,7 @@
             var assignedby = document.getElementById("assignedby").value;
 
             // code to get LC
+            var assets = JSON.parse(localStorage.getItem("assets"));
             for (var i = 0; i < assets.length; i++) {
                 var asset = assets[i];
                 if (asset.assetId == assetId) {
@@ -117,6 +118,7 @@
                 }
             }
 
+            localStorage.setItem('assets', JSON.stringify(assets));
             var toogleBtn = document.getElementById("toggleBtn");
             toogleBtn.innerHTML = "Add Asset";
             toogleBtn.removeAttribute('onclick');
