@@ -1,0 +1,235 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="../bootstrap-4.6.2-dist/css/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 50%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">Book My Show</a>
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Movies</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="demo" class="carousel slide" data-ride="carousel" data-interval="1000">
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1675164178488_hydweb.jpg"
+                    alt="Los Angeles" width="1100" height="500">
+                <div class="carousel-caption">
+                    <h3>Los Angeles</h3>
+                    <p>We had such a great time in LA!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1675680789571_motorshowweb.jpg"
+                    alt="Chicago" width="1100" height="500">
+                <div class="carousel-caption">
+                    <h3>Chicago</h3>
+                    <p>Thank you, Chicago!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1675191716156_dweb.jpg" alt="New York"
+                    width="1100" height="500">
+                <div class="carousel-caption">
+                    <h3>New York</h3>
+                    <p>We love the Big Apple!</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
+
+    <div class="modal" id="login">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Login Here</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+
+                    <input type="text" class="form-control" placeholder="username"> <br><br>
+                    <input type="text" class="form-control" placeholder="password">
+
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Login</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col- md-12 col-sm-12">
+                <div class="row">
+                    <!--1 card-->
+                    <div class="col=lg-4 col-md-4 col-sm-12 order-md-1">
+                        <div class="container block rounded-lg rounded-sm ">
+                            <!--1st row--->
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <a href=""><img width="204px" height="156px" class="img-thumbnail"
+                                            src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29:ote-MTcuOUsgbGlrZXM%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00349062-wanxhharkb-portrait.jpg"
+                                            alt="placeholder image" /></a>
+
+                                </div>
+                            </div>
+                            <!--2nd row--->
+
+                        </div>
+                    </div>
+                    <!--2nd card--->
+                    <div class="col=lg-4 col-md-4 col-sm-12 order-md-2">
+                        <div class="container block rounded-lg rounded-sm">
+                            <!--1st row--->
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <a href=""><img width="204px" height="156px" class="img-thumbnail"
+                                            src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC4zLzEwICAzMDZLIHZvdGVz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00323848-hasmqjqyvj-portrait.jpg"
+                                            alt="placeholder image" /></a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--3rd card-->
+                    <div class="col=lg-4 col-md-4 col-sm-12 order-md-3">
+                        <div class="container block rounded-lg rounded-sm">
+                            <!--1st row--->
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <a hred=""><img width="204px" height="156px" class="img-thumbnail"
+                                            src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OS4xLzEwICAxMi4xSyB2b3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00346835-sczlawuvdd-portrait.jpg"
+                                            alt="placeholder image" /></a>
+
+                                </div>
+                            </div>
+                            <!--2nd row--->
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-lg-12 col- md-12 col-sm-12">
+                <div class="row">
+                    <!--1 card-->
+                    <div class="col=lg-4 col-md-4 col-sm-12 order-md-1">
+                        <div class="container block rounded-lg rounded-sm ">
+                            <!--1st row--->
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <a href=""><img width="204px" height="156px" class="img-thumbnail"
+                                            src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-Ny4xLzEwICAxMi42SyB2b3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00342919-sgwzqgykzg-portrait.jpg"
+                                            alt="placeholder image" /></a>
+
+                                </div>
+                            </div>
+                            <!--2nd row--->
+
+                        </div>
+                    </div>
+                    <!--2nd card--->
+                    <div class="col=lg-4 col-md-4 col-sm-12 order-md-2">
+                        <div class="container block rounded-lg rounded-sm">
+                            <!--1st row--->
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <a href=""><img width="204px" height="156px" class="img-thumbnail"
+                                            src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC45LzEwICAxMjIuOUsgdm90ZXM%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00343088-vmjrfnuqqu-portrait.jpg"
+                                            alt="placeholder image" /></a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--3rd card-->
+                    <div class="col=lg-4 col-md-4 col-sm-12 order-md-3">
+                        <div class="container block rounded-lg rounded-sm">
+                            <!--1st row--->
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <a hred=""><img width="204px" height="156px" class="img-thumbnail"
+                                            src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29:ote-MS45SyBsaWtlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00344520-htuxgayqtu-portrait.jpg"
+                                            alt="placeholder image" /></a>
+
+                                </div>
+                            </div>
+                            <!--2nd row--->
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Today's Offer</h1>
+            <p>Got a show, event, activity or a great experience? Partner with us & get listed on BookMyShow</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+Bootstrap:
+
+Bootstrap is a CSS Framework for designing responsive web pages. 
+
+Bootstrap is from Twitter and its open source. 
+
+Since Bootstrap is open source, we can also customize BS based on our requirement. 
+
+
+
