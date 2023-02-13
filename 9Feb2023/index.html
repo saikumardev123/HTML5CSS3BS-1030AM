@@ -30,7 +30,7 @@
                 <a class="nav-link" data-toggle="modal" data-target="#login">Login</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Register</a>
+                <a class="nav-link" data-toggle="modal" data-target="#register">Register</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Movies</a>
@@ -92,15 +92,42 @@
                 <!-- Modal body -->
                 <div class="modal-body">
 
-                    <input type="text" class="form-control" placeholder="username"> <br><br>
-                    <input type="text" class="form-control" placeholder="password">
+                    <input type="text" id="username" class="form-control" placeholder="username"> <br><br>
+                    <input type="text" id="password" class="form-control" placeholder="password">
 
 
                 </div>
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Login</button>
+                    <button type="button" onclick="login()" class="btn btn-primary" data-dismiss="modal">Login</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="register">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Register Here</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <input type="text" id="username" class="form-control" placeholder="username">
+                    <input type="text" id="email" class="form-control" placeholder="email">
+                    <input type="text" id="password" class="form-control" placeholder="password">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="register()"
+                        data-dismiss="modal">Register</button>
                 </div>
 
             </div>
@@ -282,8 +309,7 @@
                                 </div>
 
                                 <br>
-
-
+                                <script src="index.js"></script>
 
 </body>
 
