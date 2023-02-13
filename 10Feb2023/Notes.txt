@@ -1,0 +1,8 @@
+Grid System:
+
+Grid System is all about rows and columns of a web page. We divide the web page into requried columns 
+using grid system. 
+
+Grid System helps in website layout. 
+
+The first GS introduced was 960GS. 
