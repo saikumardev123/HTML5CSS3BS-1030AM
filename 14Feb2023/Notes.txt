@@ -1,0 +1,215 @@
+Pseudo Classes: is used to provide a css effect to a specific 
+html element. 
+
+syntax:
+
+selector:pseudo-class {
+  property: value;
+}
+
+example:
+
+a:hover{
+    color:red
+}
+
+a:visited{
+    color:green
+}
+
+
+<html>
+
+<head>
+
+    <style>
+        a:hover {
+            text-decoration: none;
+            background-color: yellow;
+            color: red
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+    <a href="home.html">home</a>
+    <a href="home.html">login</a>
+    <a href="home.html">register</a>
+
+</body>
+
+</html>
+
+
+syntax:
+
+element: pseudo-class element{
+
+}
+
+div:hover p  {
+  display: block;
+}
+
+other pseudo-classes:
+
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+input[type="checkbox"]:checked {
+  height: 50px;
+  width: 50px;
+}
+</style>
+</head>
+<body>
+
+<form action="">
+  <input type="radio" checked="checked" value="male" name="gender"> Male<br>
+  <input type="radio" value="female" name="gender"> Female<br>
+  <input type="checkbox" checked="checked" value="Bike"> I have a bike<br>
+  <input type="checkbox" value="Car"> I have a car 
+</form>
+
+</body>
+</html>
+
+
+Reference:
+https://www.w3schools.com/css/css_pseudo_classes.asp
+
+
+Pseudo - elements: 
+
+pseudo-elements are used to perform some css operation on a part of an 
+element. 
+
+syntax:
+
+selector::pseudo-element {
+  property: value;
+}
+
+::after       	p::after	Insert content after every <p> element
+::before	    p::before	Insert content before every <p> element
+::first-letter	p::first-letter	Selects the first letter of every <p> element
+::first-line	p::first-line	Selects the first line of every <p> element
+::selection	p::selection	Selects the portion of an element that is selected by a user
+
+
+<html>
+
+<head>
+
+    <style>
+        p::after {
+            content: '(For Plus Members)'
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>Sale starts at 12 AM today</p>
+</body>
+
+</html>
+
+
+<html>
+
+<head>
+
+    <style>
+        p::first-letter {
+            font-family: cursive;
+            color: red
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <p>Sale starts at 12 AM today</p>
+</body>
+
+</html>
+
+
+
+<html>
+
+<head>
+
+    <style>
+        p::first-line {
+            font-family: cursive;
+            color: red
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>Sale starts at 12 AM today
+        The numbers in the table specifies the first browser version that fully supports the selector.
+        The numbers in the table specifies the first browser version that fully supports the selector.</p>
+</body>
+
+</html>
+
+
+<html>
+
+<head>
+
+    <style>
+        p::first-line {
+            font-family: cursive;
+            color: red
+        }
+
+        p::selection {
+            color: green;
+            background-color: yellow
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>Sale starts at 12 AM today
+        The numbers in the table specifies the first browser version that fully supports the selector.
+        The numbers in the table specifies the first browser version that fully supports the selector.</p>
+</body>
+
+</html>
+
+
+Media Queries:
+
+CSS3 has enhanced media queries from CSS2. 
+
+The main use of media queries is to provide the responsive nature to 
+the UI web pages based on different devices.
+
+
+Frameworks like Bootstrap internally uses Media queries to provide 
+responsive nature to the web pages. 
+
+syntax:
+
+@media not|only mediatype and (expressions) {
+  CSS-Code;
+}
+
+
+
+
+
+
